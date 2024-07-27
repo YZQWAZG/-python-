@@ -10,3 +10,15 @@ def bubble_sort(li):
 li=[random.randint(0,10000) for i in range(1000)]
 bubble_sort(li)
 print(li)
+排序算法
+def select_sort(li):
+  n = len(li)
+  for i in range(n-1):
+    min_loc = i
+    for j in range(i,n):
+      if li[j] <= li[min_loc]:
+        min_loc = j
+    li[i], li[min_loc] = li[min_loc], li[i]
+li=[3,2,1,4,6,5]
+select_sort(li)
+print(li)
