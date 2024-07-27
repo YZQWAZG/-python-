@@ -22,3 +22,16 @@ def select_sort(li):
 li=[3,2,1,4,6,5]
 select_sort(li)
 print(li)
+插入排序
+def insert_sort(li):
+  n = len(li)
+  for i in range(1,n):
+    tmp = li[i]
+    j = i - 1
+    while j >= 0 and tmp <= li[j]:
+      li[j+1] = li[j]
+      j -= 1
+    li[j+1] = tmp
+li=[3,2,1,4,6,5]
+insert_sort(li)
+print(li)
